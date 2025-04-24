@@ -226,3 +226,26 @@ function mergeTwoArray(arr1,arr2){
 
 console.log(mergeTwoArray([1, 3, 5], [2, 4, 6]));
 
+
+//**common from two string  */
+
+function common(str1,str2){
+    let freq = {}
+    let result = []
+
+    for(let char of str2){
+        freq[char] = (freq[char] || 0)+1
+    }
+    for(let char of str1){
+        if(freq[char]){
+            result.push(char)
+            freq[char]--
+        }
+    }
+
+    return result
+}
+
+
+console.log(common('aabbcc','abcabc'));
+

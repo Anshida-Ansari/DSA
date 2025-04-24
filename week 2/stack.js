@@ -176,4 +176,121 @@ console.log(isValidParentheses('{}'));
 console.log(isValidParentheses('{}}{'));
 
 
+// **stack using queue */
+// *******using two queue */
+
+// class stackQueue{
+//     constructor(){
+//         this.q1 = []
+//         this.q2 = []
+
+
+//     }
+
+//     push(x){
+//         this.q2.push(x)
+//         while(this.q1.length>0){
+//             this.q2.push(this.q1.shift())
+
+
+//         }
+//         [this.q1 , this.q2] = [this.q2 , this.q1]
+//     }
+
+//     pop(){
+//         return this.q1.shift()
+//     }
+//     print() {
+//         console.log(this.q1.slice().reverse().join(" -> "));
+//     }
+// }
+
+// const queue = new stackQueue()
+// queue.push(89)
+// queue.push(9)
+// queue.push(8)
+
+// console.log(queue.pop());
+
+// queue.print()
+
+
+class stackQueue{
+    constructor(){
+        this.q1 = []
+        this.q2 = []
+    }
+
+    push(x){
+        this.q2.push(x)
+        while(this.q1.length>0){
+            this.q2.push(this.q1.shift())
+        }
+        [this.q1,this.q2] = [this.q2,this.q1]
+        
+    }
+
+    pop(){
+        return this.q1.shift()
+    }
+    top(){
+        return this.q1[0]
+
+    }
+
+    isEmpty(){
+        return this.q1.length ===0
+    }
+    print(){
+        console.log(this.q1.slice().join('->'));
+        
+    }
+    
+}
+
+const q = new stackQueue()
+q.push(10)
+q.push(89)
+q.push(900)
+q.pop()
+q.print()
+
+
+//**stack using 1 queue */
+
+class oneStackQueue{
+    constructor(){
+        this.q = []
+    }
+
+    push(x){
+        this.q.push(x)
+        for(let i=0;i<this.q.length-1;i++){
+            this.q.push(this.q.shift())
+        }
+    }
+
+    pop(){
+        return this.q.shift()
+
+    }
+    top(){
+        return this.q[0]
+    }
+    print(){
+        console.log(this.q.join('->'));
+        
+    }
+}
+
+const sq = new oneStackQueue()
+
+sq.push(1)
+sq.push(2)
+sq.push(3)
+
+console.log(sq.top());
+
+
+sq.print()
 
