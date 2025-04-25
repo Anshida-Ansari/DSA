@@ -249,3 +249,24 @@ function common(str1,str2){
 
 console.log(common('aabbcc','abcabc'));
 
+
+//**two sum */
+function twoSum(nums,target){
+    let map = {}
+
+    for(let i=0;i<nums.length;i++){
+        let curr = nums[i]
+        let element = target - curr
+        
+        
+        if(map[element] !== undefined){
+            return [map[element],i]
+        }
+        
+        map[curr] = i
+    }
+    
+    return []
+}
+console.log(twoSum([9,7,6,542,2],8))
+

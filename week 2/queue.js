@@ -130,93 +130,93 @@
 // q.dequeue()
 // q.print()
 
-//**queue implemented using array */
+// **queue implemented using array */
 
-//     class queue{
-//         constructor(){
-//             this.item = []      
-//         }
+    class queue{
+        constructor(){
+            this.item = []      
+        }
 
-//         enqueue(element){
-//             this.item.push(element)
-//         }
+        enqueue(element){
+            this.item.push(element)
+        }
 
-//         dequeue(){
-//             this.item.shift()
-//         }
+        dequeue(){
+            this.item.shift()
+        }
 
-//         peek(){
-//             return this.item[0]
-//         }
+        peek(){
+            return this.item[0]
+        }
 
-//         size(){
-//             return this.item.length
-//         }
-//         isEmpty(){
-//             return this.item.length === 0
-//         }
-//         print(){
-//             console.log(this.item.toString());
+        size(){
+            return this.item.length
+        }
+        isEmpty(){
+            return this.item.length === 0
+        }
+        print(){
+            console.log(this.item.toString());
             
-//         }
-//     }
+        }
+    }
 
-//     const q = new queue()
+    const q = new queue()
 
-//     q.enqueue(89)
-//     q.enqueue(19)
-//     console.log(q.isEmpty());
-//     console.log(q.size());
-//     console.log(q.peek());
+    q.enqueue(89)
+    q.enqueue(19)
+    console.log(q.isEmpty());
+    console.log(q.size());
+    console.log(q.peek());
 
 
 
-//     q.print()
+    q.print()
 
-// //**queue with object */
+//**queue with object */
 
-// class Queue{
-//     constructor(){
-//         this.item = {}
-//         this.head = 0
-//         this.tail = 0
+class Queue{
+    constructor(){
+        this.item = {}
+        this.head = 0
+        this.tail = 0
 
-//     }
+    }
 
-//     enqueue(element){
-//         this.item[this.tail] = element
-//         this.tail++
-//     }
-//     dequeue(){
-//         const items = this.item[this.head]
-//         delete this.item[this.head]
-//         this.head--
-//     }
-//     peek(){
-//         return this.item[this.head]
-//     }
-//     size(){
-//         return  this.tail - this.head
-//     }
-//     isEmpty(){
-//         return this.size() === 0
-//     }
-//     print(){
-//         console.log(this.item);
+    enqueue(element){
+        this.item[this.tail] = element
+        this.tail++
+    }
+    dequeue(){
+        const items = this.item[this.head]
+        delete this.item[this.head]
+        this.head--
+    }
+    peek(){
+        return this.item[this.head]
+    }
+    size(){
+        return  this.tail - this.head
+    }
+    isEmpty(){
+        return this.size() === 0
+    }
+    print(){
+        console.log(this.item);
         
-//     }
-// }
+    }
+}
 
-// const qu = new Queue()
-// qu.enqueue(87)
-// qu.enqueue(65)
-// qu.enqueue(56)
-// qu.dequeue()
-// console.log(qu.size());
+const qu = new Queue()
+qu.enqueue(87)
+qu.enqueue(65)
+qu.enqueue(56)
+qu.dequeue()
+console.log(qu.size());
 
-// console.log(qu.isEmpty());
+console.log(qu.isEmpty());
 
-// qu.print()
+qu.print()
 
 
 
