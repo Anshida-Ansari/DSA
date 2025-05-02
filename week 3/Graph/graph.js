@@ -117,6 +117,50 @@ class Graph{
         }
         delete this.adjencencylist[vertex]
     }
+
+    bfs(start){
+
+        let queue  = []
+        let visited = new Set()
+
+        visited.add(start)
+        queue.push(start)
+
+        while(queue.length>0){
+            let node = queue.shift()
+            console.log(node);
+            
+
+            for(let neigbours of this.adjencencylist[node] ){
+                if(!visited.has(neigbours)){
+                    visited.add(neigbours)
+                    queue.push(neigbours)
+                }
+            }
+        }
+
+    }
+    dfs(start){
+        let stack = []
+        stack.push(start)
+        let visited = new Set()
+        visited.add(start)
+
+
+        while(stack.length>0){
+            let node = stack.pop()
+            console.log(node);
+            
+
+            for(let neigbours of this.adjencencylist[node]){
+                if(!visited.has(neigbours)){
+                    visited.add(neigbours)
+                    stack.push(neigbours)
+
+                }
+            }
+        }
+    }
 }
 
 const graph = new Graph()
@@ -130,3 +174,8 @@ graph.removeVertex('C')
 // console.log(graph.hasEdge('A','B'));
 
 graph.display()
+console.log('traversal nokkan');
+graph.bfs('B')
+console.log('dfs');
+graph.dfs('A')
+
