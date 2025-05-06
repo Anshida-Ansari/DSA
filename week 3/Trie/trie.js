@@ -86,7 +86,12 @@ class Trie{
   
 
    
-
+   autoComplete(prefix) {
+    const suggestions = this.startWith(prefix);
+    if (suggestions.length === 0) return prefix;
+    return suggestions[0];
+  }
+  
 
 
 }
@@ -103,6 +108,8 @@ trie.delete('apple')
 console.log(trie.search('apple'));
 
 console.log(trie.startWith('app'));
+console.log(trie.autoComplete('appl'));
+
 
 
 //** Compelxity */ 

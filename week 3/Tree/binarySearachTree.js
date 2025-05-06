@@ -139,6 +139,28 @@ class BinarySearchTree{
             return root
         }
     }
+
+    kthSmallest(k){
+        let count = 0
+        let result = null
+
+        function inorder(node){
+            if(!node || result !== null)return
+
+            inorder(node.left)
+                count++
+                if(k===count){
+                    result = node.value
+                    return
+                }
+
+                inorder(node.right)
+                
+            
+        }
+        inorder(this.root)
+        return result
+    }
 }
 
 const bst = new BinarySearchTree()
@@ -151,7 +173,7 @@ bst.insert(15)
 bst.insert(3)
 
 
-bst.delete(10)
+// bst.delete(10)
 bst.levelOrder()
 
 bst.insert(7)
@@ -166,6 +188,8 @@ bst.preorder(bst.root)
 bst.postOrder(bst.root)
 bst.levelOrder()
 
+
+console.log(bst.kthSmallest());
 
 // console.log(bst.min(bst.root));
 // console.log(bst.max(bst.root));
