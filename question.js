@@ -270,3 +270,5 @@ function twoSum(nums,target){
 }
 console.log(twoSum([9,7,6,542,2],8))
 
+
+
