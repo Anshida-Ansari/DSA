@@ -1,23 +1,5 @@
 
 
-// function insertSort(array){
-//     for(let i=1;i<array.length;i++){
-//         let temp = array[i]
-//         j=i-1
-
-//         while(j>=0 && array[j]>temp){
-//             array[j+1]=array[j]
-//             j--
-//         }
-//         array[j+1] = temp
-//     }
-//     return array
-// }
-
-
-// console.log(insertSort([3,2,6,7,5]));
-
-
 function insertSort(arr){
     let n = arr.length
     for(let i=1;i<n;i++){

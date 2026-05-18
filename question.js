@@ -202,7 +202,7 @@ function isValidParentheses(s){
     
 }
 
-console.log(isAnagram("listen", "silent")); 
+console.log(isAnagram("listen", "silent"));     
 console.log(isAnagram("hello", "bello"));
 
 function mergeTwoArray(arr1,arr2){

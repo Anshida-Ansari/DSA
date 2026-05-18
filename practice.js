@@ -335,3 +335,32 @@ console.log(bst.search(bst.root,90));
 bst.levelOrder()
 
 
+//**non repeating array of character (whole char) */
+
+function nonReapting(str){
+    let freq = {}
+    let unique = []
+    
+    for(let char of str){
+        freq[char] = (freq[char] || 0)+1
+        
+        if(freq[char]===1){
+            unique.push(char)
+        }
+        
+    }
+    let nonRep = []
+    for(let char of unique){
+        if(freq[char]===1){
+            nonRep.push(char)
+        }
+    }
+    
+    return nonRep
+    
+}
+
+console.log(nonReapting('swiss'))
+
+
+

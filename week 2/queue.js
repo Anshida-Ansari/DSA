@@ -1,29 +1,29 @@
-// class queue{
-//     constructor(){
-//         this.items = []
-//     }
+class queue{
+    constructor(){
+        this.items = []
+    }
 
-//     enqueue(elements){
-//         this.items.push(elements)
-//     }
+    enqueue(elements){
+        this.items.push(elements)
+    }
 
-//     dequeue(){
-//        return  this.items.shift()
-//     }
+    dequeue(){
+       return  this.items.shift()
+    }
 
-//     isEmpty(){
-//         return this.items.length === 0
-//     }
+    isEmpty(){
+        return this.items.length === 0
+    }
 
-//     peek(){
-//         if(!this.isEmpty){
-//             return this.items[0]
-//         }
+    peek(){
+        if(!this.isEmpty){
+            return this.items[0]
+        }
 
-//         return null
-//     }
+        return null
+    }
 
-// }
+}
 
 
 // class Queue{

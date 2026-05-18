@@ -80,7 +80,7 @@ function mergeSort(arr){
     let left = arr.slice(0,mid)
     let right = arr.slice(mid)
 
-    return merge(mergeSort(left),mergeSort(right))
+    return merge(mergeSort(left),mergeSort(r    ight))
 }
 
 function merge(left , right){

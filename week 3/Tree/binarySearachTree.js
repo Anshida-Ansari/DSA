@@ -1,5 +1,4 @@
 class Node{
-
     constructor(value){
         this.value = value
         this.left = null
@@ -7,7 +6,7 @@ class Node{
     }
 }
     
-class BinarySearchTree{
+class Tree{
     constructor(){
         this.root = null
     }
@@ -163,7 +162,7 @@ class BinarySearchTree{
     }
 }
 
-const bst = new BinarySearchTree()
+const bst = new Tree()
 console.log(bst.isEmpty());
 
 
@@ -174,7 +173,7 @@ bst.insert(3)
 
 
 // bst.delete(10)
-bst.levelOrder()
+
 
 bst.insert(7)
 
@@ -183,16 +182,17 @@ bst.insert(7)
 // console.log(bst.search(bst.root,90));
 // console.log(bst.search(bst.root,15));
 
-bst.preorder(bst.root)
+// bst.preorder(bst.root)
 // bst.inorder(bst.root)
-bst.postOrder(bst.root)
-bst.levelOrder()
+// bst.postOrder(bst.root)
+// bst.levelOrder()
 
 
 console.log(bst.kthSmallest());
 
 // console.log(bst.min(bst.root));
 // console.log(bst.max(bst.root));
+
 
 
 

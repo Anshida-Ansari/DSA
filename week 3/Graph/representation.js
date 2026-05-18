@@ -15,12 +15,19 @@ console.log(matrix[0][1]);
 //**adjecency list */
 
 adjeecency = {
-    'A' : ['B'],
-    'B': ['A', 'B'],
+    'A':['B'],
+    'B':['A', 'B'],
     'C':['B']
 }
+
+
 
 console.log(adjeecency['C']);
 
 // it will show how much edge does it have 
+
+adjecencyList = {
+    'A':['A','B'],
+    'B':['A']
+}
 

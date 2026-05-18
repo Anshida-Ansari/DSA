@@ -91,7 +91,7 @@
 // function isPrime(n){
 //     if(n<=1) return false
 
-//     for(let i=2 ;i<Math.sqrt(n);i++){
+//     for(let i=2 ;i<Math.sqrt(n);i++){ 
 //         if(n % i == 0 ) return false
 //     }
 
@@ -227,7 +227,7 @@
 // console.log(linearSearch([1,2,3,4,5,6,7],10))
 
 
-// function binarySearch(arr,target){
+// function (arr,target){
 //     let left = 0
 //     let right = arr.length-1
 
@@ -246,7 +246,7 @@
 //     return -1
 // }
 
-// console.log(binarySearch([2,3,6,9,10],9));
+// console.log(([2,3,6,9,10],9));
 
 // function binaryRecrussive(arr, targert) {
 

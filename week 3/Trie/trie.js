@@ -19,7 +19,7 @@ class Trie{
             }
 
             node = node.children[char]
-        }
+        }   
 
         node.endOfWord = true
     }
@@ -77,7 +77,7 @@ class Trie{
     let words = []
     if(node.endOfWord) words.push(prefix)
 
-        for(let char in node.children){
+        for(let char in node.children){ 
             words.push(...this.getWords(node.children[char],prefix+char))
         }
 
